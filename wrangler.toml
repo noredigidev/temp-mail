@@ -1,0 +1,39 @@
+name = "tempmail"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+
+# Set workers_dev to false when using your own domain
+workers_dev = false
+
+# ---- D1 Database ----
+# Step 1: run `npx wrangler d1 create tempmail-db`
+# Step 2: copy the database_id here
+[[d1_databases]]
+binding = "DB"
+database_name = "tempmail-db"
+database_id = "d94360e1-bc34-406c-b740-fdc6a729eba3"
+
+# ---- Email Worker ----
+[email]
+action = "process"
+
+# ---- Custom domain routes ----
+# CHANGE THIS to your own domains
+[[routes]]
+pattern = "tempmail.noredigital.web.id"
+custom_domain = true
+
+# ---- Environment variables ----
+# CHANGE THESE to your own domains (comma-separated)
+[vars]
+APP_NAME = "Temp-Mail"
+MAIL_DOMAIN = "noredigital.web.id,nore.my.id,boten.web.id,exwe.biz.id,romitchi.my.id"
+WEB_HOST = "tempmail.noredigital.web.id" # The primary web host for links
+
+# ---- Static assets (web frontend) ----
+[assets]
+directory = "./src/web"
+
+# ---- Observability ----
+[observability]
+enabled = true
