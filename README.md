@@ -94,7 +94,7 @@ custom_domain = true
 
 # Environment — CHANGE THESE (MAIL_DOMAIN supports comma-separated domains)
 [vars]
-APP_NAME = "Tempik"
+APP_NAME = "Temp-Mail"
 MAIL_DOMAIN = "YOURDOMAIN.com,ANOTHERDOMAIN.com"
 WEB_HOST = "tempmail.YOURDOMAIN.com"
 
