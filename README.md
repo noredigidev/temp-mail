@@ -1,6 +1,6 @@
 # Disposable Temp Mail on Cloudflare Workers
 
-Tempik is a **self-hosted disposable email** service that runs entirely on **Cloudflare Workers** — no VPS required. It uses Cloudflare Email Workers to receive inbound email, D1 for storage, and serves a clean web UI from the edge.
+Temp Mail is a **self-hosted disposable email** service that runs entirely on **Cloudflare Workers** — no VPS required. It uses Cloudflare Email Workers to receive inbound email, D1 for storage, and serves a clean web UI from the edge.
 
 ---
 
@@ -39,8 +39,8 @@ Before you start, you need:
 ## Step 1 — Clone & install dependencies
 
 ```bash
-git clone https://github.com/hirotomasato/tempik.git
-cd tempik
+git clone https://github.com/noredigidev/temp-mail.git
+cd temp-mail
 npm install
 ```
 
@@ -327,7 +327,3 @@ npm install --save-dev wrangler@4
 ## License
 
 MIT
-
----
-
-Developer by [masantoid](https://github.com/hirotomasato)
